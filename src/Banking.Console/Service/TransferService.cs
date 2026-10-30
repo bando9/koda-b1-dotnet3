@@ -1,4 +1,6 @@
 using Banking.Console.Interface;
+using Banking.Console.Models;
+
 
 public class TransferService : ITransferService
 {

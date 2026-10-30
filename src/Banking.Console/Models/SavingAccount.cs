@@ -1,3 +1,6 @@
+using Banking.Console.Models;
+
+
 public class SavingAccount : Account
 {
     // private Account account {get; private set;}
@@ -5,4 +8,11 @@ public class SavingAccount : Account
     {
         
     }
+
+    public override String GetInformation()
+    {
+        return $"Saving - {base.GetInformation()}";
+    }
+
+
 }

@@ -1,3 +1,5 @@
+namespace Banking.Console.Models;
+
 public abstract class Account
 {
     // Property 
@@ -28,8 +30,21 @@ public abstract class Account
     }
 
 
-    public String GetInformation()
+    public virtual String GetInformation()
     {
-        return $"{AccountNumber} - {OwnerName}\nBalance: Rp.{Balance}\n";
+        return $"{AccountNumber} - {OwnerName} - Rp.{Balance} - {GetActiveAccount()}";
     }
+
+    public String GetActiveAccount()
+    {
+        if (IsActive)
+        {
+            return "Active";
+        } else
+        {
+            return "Frozen";
+        }
+    }
+
+
 }

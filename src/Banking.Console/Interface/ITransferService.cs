@@ -1,3 +1,4 @@
+using Banking.Console.Models;
 namespace Banking.Console.Interface;
 
 public interface ITransferService
