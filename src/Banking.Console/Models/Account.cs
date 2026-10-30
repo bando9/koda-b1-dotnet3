@@ -1,11 +1,12 @@
-public class Account
+public abstract class Account
 {
     // Property 
     public string AccountNumber { get; set; }
     public string OwnerName { get; set; }
     public int Balance { get; set; } 
+    public bool IsActive { get; set; }
 
-    public Account(string accountNumber, string ownerName, int balance)
+    public Account(string accountNumber, string ownerName, int balance, bool isActive)
     {
         if (String.IsNullOrWhiteSpace(accountNumber))
         {
@@ -23,11 +24,12 @@ public class Account
         AccountNumber=accountNumber;
         OwnerName=ownerName;
         Balance=balance;
+        IsActive=isActive;
     }
 
 
     public String GetInformation()
     {
-        return $"Account Number\t: {AccountNumber}\nName: {OwnerName}\nBalance: {Balance}\n";
+        return $"{AccountNumber} - {OwnerName}\nBalance: Rp.{Balance}\n";
     }
 }
